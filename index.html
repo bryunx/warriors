@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<title>CSS Absolute Positioning - HTML5</title>
+
+<style>
+
+/* background image tiled to y-axis on the left 
+
+IE has built in padding and margins; hence the 0 for padding and margin
+
+*/
+
+body {
+background-image: URL('banner.jpg');
+background-repeat: repeat-x;
+background-position: top;
+background-color: #006BB6;
+padding:0;
+margin:0;
+
+}
+
+ 
+* html {
+padding:0;
+margin:0;
+}
+  
+
+
+/* header positioning and style - shadow code from
+
+http://andreas.web-graphics.com/css-shadow/ 
+
+The CSS !important declaration is a pretty useful little tool to keep in your set of tricks. 
+Declare a property value !important to ensure that the value sticks no matter what value
+ comes later.
+
+http://wordpress.betech.virginia.edu/index.php/2006/02/16/css-important-declaration-ie-hack/
+
+*/
+
+
+#hdr {
+	font-family: Verdana;
+	font-size: 1.6em;
+	font-weight: bold;
+	color: #FDB927;
+    position: absolute; 
+    top: 80px; 
+	text-shadow: 5px 5px 5px #888888;
+	left: 36%;
+}
+
+
+/* header date style */
+
+#dat {font-size: 12px;}
+
+
+/* giants' text positioning */
+
+#giants { 
+position: absolute; 
+top: 370px;
+left: 119px; 
+width: 300px;
+} 
+
+/*logo*/
+
+#logo {
+	position: absolute;
+	top: 180px;
+	left: 565px;
+	z-index: 10;
+}
+
+/*ring*/
+
+#logo1 {
+	position: absolute;
+	top: 225px;
+	left: 635px;
+	z-index: 10;
+}
+
+/* a's text positioning */
+
+#as {
+position: absolute; 
+top: 360px;
+left: 733px; 
+width: 420px;
+}
+
+
+/* text style both both teams */
+
+p.teamtext {
+font-size: 10pt;
+background-color: #f5f5dc; 
+border: 3px #000000;
+border-style: solid double; 
+padding: 3px; 
+text-align: justify;
+font-family: trebuchet ms;
+}
+
+
+/* giants' logo positioning */
+
+#zgiants 
+{
+position: absolute;
+top: 140px;
+left: 740px;
+z-index: 10;
+} 
+
+
+/* national league table positioning */
+
+#nat {
+position: absolute;
+top: 140px;
+left: 130px;
+border: 3px #000000;
+border-style: solid double;
+font-family: trebuchet ms;
+}
+
+/* american league table positioning */
+
+#amer {
+position: absolute;
+top: 140px;
+left: 360px;
+border: 3px #000000;
+border-style: solid double;
+font-family: trebuchet ms;
+}
+
+/* table styles */
+
+table.natamer {
+font-size: 12px;
+background-color: #f5f5dc;
+border: 1px;
+padding: 2px;
+}
+
+
+/* table caption style */
+
+#capAL {
+	font-size: 16px;
+	color: #000000;
+	font-weight: bold;
+	background-color: #f5f5dc;
+}
+
+#capNL {
+	font-size: 16px;
+	color: #000000;
+	font-weight: bold;
+	background-color: #f5f5dc;
+}
+
+
+/* table  style */
+
+td.tabteam {background-color: #ffffff;}
+
+td.right {text-align: right;}
+
+
+/* giants' link positioning */
+
+#goff {
+position: absolute;
+top: 340px;
+left: 181px;
+}
+
+
+/* a's link positioning */
+
+#aoff {
+position: absolute;
+top: 340px;
+left: 468px;
+}
+
+
+/* Curry positioning */
+
+#curry
+
+{
+position: absolute;
+top: 395px;
+left: 460px;
+z-index: 20;
+}
+
+
+
+/* Klay positioning */
+
+#klay
+
+{
+position: absolute;
+top: 420px;
+left: 540px;
+z-index: 10;
+}
+
+
+
+/* link styles */
+
+a.offteam {
+
+font-size: 15px;
+font-weight: bold; 
+color: blue;
+padding: 2px;
+background-color: #f5f5dc;
+text-decoration: none;
+}
+
+
+/* link hover styles */
+
+a:hover {
+color: #000000; 
+text-decoration: underline;
+background-color: yellow;
+}
+
+
+/* 1st rounded corner */
+
+div.rounded-box {
+	position: absolute;
+	top: 135px;
+	left: 565px;
+	width: 160px;
+	background-color: #c60;
+	border-radius: 10px; 
+    margin: 3px;
+}
+
+/*********************
+GLOBAL ATTRIBUTES
+*********************/
+div.top-left-corner, div.bottom-left-corner, div.top-right-corner, div.bottom-right-corner
+{position:absolute; width:20px; height:20px; overflow:hidden;}
+
+div.top-left-inside, div.bottom-left-inside, div.top-right-inside, div.bottom-right-inside {position:relative; font-size:150px; font-family:arial; color:#c60; line-height: 40px;}
+
+/*********************
+SPECIFIC ATTRIBUTES
+*********************/
+
+div.top-left-corner { top:0px; left:0px; }
+div.bottom-left-corner {bottom:0px; left:0px;}
+div.top-right-corner {top:0px; right:0px;}
+div.bottom-right-corner {bottom: 0px; right:0px;}
+
+div.top-left-inside {left:-8px;}
+div.bottom-left-inside {left:-8px; top:-17px;}
+div.top-right-inside {left:-25px;}
+div.bottom-right-inside {left:-25px; top:-17px;}
+
+div.box-contents {
+	position: relative; padding: 8px; color:#fff;
+}
+
+
+/* nifty corners http://www.html.it/articoli/nifty/nifty1.html */
+
+h3,p{margin: 0 10px}
+h3{color: #FFF}
+p{padding-bottom:1em}
+
+p.r {color: white;}
+
+div#nifty{ position: absolute; top: 220px; left: 740px;
+
+
+background: #cc6600}
+
+b.rtop, b.rbottom{display:block;background: #deb887}
+b.rtop b, b.rbottom b{display:block;height: 1px;
+    overflow: hidden; background: #cc6600}
+b.r1{margin: 0 5px}
+b.r2{margin: 0 3px}
+b.r3{margin: 0 2px}
+b.rtop b.r4, b.rbottom b.r4{margin: 0 1px;height: 2px}
+
+
+
+/* 2nd rounded corner */
+
+#moz { position: absolute; top: 220px; left: 690px;
+background-color: #cc6600;  width: 300px; border: 0px; padding: 5px; 
+border-radius: 25px;  text-align: center;}
+
+img {border: 0;}
+
+
+/* Box shadow */
+
+#box
+{
+position: absolute; top: 525px; left: 715px;
+width:270px;
+height:100px;
+color: #fff;
+background-color: #cc6600;
+-moz-box-shadow: 10px 10px 5px #888888; /* Firefox 3.6 and earlier */
+-webkit-box-shadow: 10px 10px 5px #888888; /* Safari */
+box-shadow: 10px 10px 5px #888888;
+}
+
+/* CSS Validation positioning */
+
+#valCSS
+
+{
+position: absolute;
+top: 595px;
+left: 540px;
+margin-bottom: 20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header id="hdr">Warrior's 2018 Summary
+</header>
+
+
+<section>
+
+
+<div class="rounded-box">
+
+    <div class="top-left-corner"><div class="top-left-inside">&bull;</div></div>
+    <div class="bottom-left-corner"><div class="bottom-left-inside">&bull;</div></div>
+
+    <div class="top-right-corner"><div class="top-right-inside">&bull;</div></div>
+    <div class="bottom-right-corner"><div class="bottom-right-inside">&bull;</div></div>
+    <div class="box-contents">
+        <b>Let's Go Warriors!!!</b>
+
+    </div> <!-- end div.box-contents --> 
+
+</div> <!-- end div.rounded-box -->
+
+
+
+
+
+
+
+<div id="zgiants">
+<img src="team.png" width="400" height="200" alt="Warriors Team">
+</div>
+
+
+<div id="nat">
+<table class="natamer">
+<caption id="capNL">Players</caption>
+<tr>
+<th>Name</th>
+
+<th>NO.</th>
+
+<th>POS</th>
+<th>HT</th>
+</tr>
+
+
+<tr>
+<td>Draymond Green</td>
+<td class="tabteam">23</td>
+<td class="tabteam">PF</td>
+<td class="tabteam">6'-7"</td>
+<td>&nbsp;</td>
+
+</tr>
+
+
+<tr>
+<td>Jordan Bell</td>
+<td class="tabteam">2</td>
+<td class="tabteam">C</td>
+<td class="right">6'-9"</td>
+</tr>
+
+
+<tr>
+<td>Quinn Cook</td>
+
+<td class="tabteam">4</td>
+<td class="tabteam">PG</td>
+<td class="right">6'-2"</td>
+</tr>
+
+
+
+<tr>
+<td>Stephen Curry</td>
+<td class="tabteam">30</td>
+<td class="tabteam">PG</td>
+<td class="right">6'-3"</td>
+</tr>
+
+
+<tr>
+<td>Kevin Durant</td>
+<td class="tabteam">35</td>
+<td class="tabteam">SF</td>
+<td class="right">6'-9"</td>
+</tr>
+
+<tr>
+<td>Andre Iguodala</td>
+<td class="tabteam">9</td>
+<td class="tabteam">SF</td>
+<td class="right">6'-6"</td>
+</tr>
+
+<tr>
+<td>Damian Jones</td>
+<td class="tabteam">15</td>
+<td class="tabteam">C</td>
+<td class="right">7'-0"</td>
+</tr>
+
+</table>
+</div>
+
+<div id="amer">
+<table class="natamer">
+<caption id="capAL">Players (cont.)</caption>
+<tr>
+<th>Name</th>
+
+<th>NO.</th>
+
+<th>POS</th>
+<th>HT</th>
+</tr>
+
+
+<tr>
+<td>Shaun Livingston</td>
+<td class="tabteam">34</td>
+<td class="tabteam">PG</td>
+<td class="tabteam">6'-7"</td>
+<td>&nbsp;</td>
+
+</tr>
+
+
+<tr>
+<td>Kevon Looney</td>
+<td class="tabteam">5</td>
+<td class="tabteam">SF</td>
+<td class="right">6'-9"</td>
+</tr>
+
+
+<tr>
+<td>Patrick McCaw</td>
+
+<td class="tabteam">0</td>
+<td class="tabteam">SG</td>
+<td class="right">6'-7"</td>
+</tr>
+
+
+
+<tr>
+<td>JaVale McGee</td>
+<td class="tabteam">1</td>
+<td class="tabteam">C</td>
+<td class="right">7'-0"</td>
+</tr>
+
+
+<tr>
+<td>Zaza Pachulia</td>
+<td class="tabteam">27</td>
+<td class="tabteam">C</td>
+<td class="right">6'-11"</td>
+</tr>
+
+<tr>
+<td>Klay Thompson</td>
+<td class="tabteam">11</td>
+<td class="tabteam">SG</td>
+<td class="right">6'-7"</td>
+</tr>
+
+<tr>
+<td>David West</td>
+<td class="tabteam">3</td>
+<td class="tabteam">PF</td>
+<td class="right">6'-9"</td>
+</tr>
+
+<tr>
+<td>Nick Young</td>
+<td class="tabteam">6</td>
+<td class="tabteam">SG</td>
+<td class="right">6'-7"</td>
+</tr>
+
+</table>
+</div>
+
+
+
+
+<div id="giants">
+<p class="teamtext">
+According to the NBA, as of January 2018 Stephen Curry’s career stats are:
+<br>
+- 34.6 minutes per game <br>
+- 47.7 field goal percentage <br>
+- 43.6 3-pointer percentage <br>
+- 90.3 free-throw percentage <br>
+- 23 points per game <br>
+- 4.4 rebounds per game <br>
+- 6.8 averages per game <br>
+- 0.2 blocks per game
+</p>
+</div>
+
+
+<div id="as">
+<p class="teamtext">The Golden State Warriors are an American professional basketball team based in Oakland, California. The Warriors compete in the National Basketball Association (NBA) as a member of the leagues's Western Conference Pacific Division. The Warriors play their home games at the Oracle Arena in Oakland. The Warriors have reached nine NBA Finals, winning five NBA championships in 1947, 1956, 1975, 2015, and 2017. Golden State's five NBA championships are tied for fourth-most in NBA history with the San Antonio Spurs, and behind only the Boston Celtics, Los Angeles Lakes and Chicago Bulls. As of 2017, the Warriors are the third most valuable NBA franchise according to Forbes, with an estimated value of $2.6 billion.
+
+
+<br>
+</p>
+</div>
+
+
+
+
+<div id="goff">
+<a class="offteam" href="http://www.nba.com/players/stephen/curry/201939"><span style="
+color: #c60;">Stephen Curry Stats</span></a>
+</div>
+
+
+<div id="aoff">
+<a class="offteam" href="http://www.nba.com/warriors/roster"><span style="
+color: green;">Warriors Roster</span></a>
+
+</div>
+
+
+ 
+<div id="curry"><a href="https://en.wikipedia.org/wiki/Stephen_Curry"><img src="curry.jpg" 
+alt="Stephen Curry" title="Stephen Curry" width="96" height="72"></a></div>
+
+
+<div id="klay"><a href="https://en.wikipedia.org/wiki/Klay_Thompson"><img src="thompson.jpg" 
+alt="Klay Thompson" title="Klay Thompson" width="96" height="72"></a></div>
+
+<div id="logo"><img src="logo.jpg" 
+alt="Buster Posey" title="Buster Posey" width="96" height="72"></a></div>
+
+
+<div id="logo1"><img src="logo1.jpg" 
+alt="Brett Anderson" title="Brett Anderson" width="96" height="72"></a></div>
+
+
+<div id="valCSS">    
+
+
+<a href="https://validator.w3.org/check?uri=referer">
+<img style="border:0;width:88px;height:31px" src="HTML5.gif" alt="HTML5"></a>
+
+
+
+<a href="https://jigsaw.w3.org/css-validator/check/referer?profile=css3">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" /></a>
+
+
+</div>
+
+</section>
+</body>
+</html>
